@@ -1,6 +1,4 @@
-package design.pattern.factory;
-
-import java.util.Random;
+package design.pattern.ch1.factory;
 
 public class Customer {
     public String drinkCoffee(CoffeeType type){

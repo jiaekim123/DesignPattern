@@ -1,4 +1,4 @@
-package design.pattern.factory;
+package design.pattern.ch1.factory;
 
 public enum CoffeeType {
     AMERICANO("AMERICANO", "아메리카노"),

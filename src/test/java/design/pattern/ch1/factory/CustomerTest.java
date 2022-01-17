@@ -1,10 +1,8 @@
-package design.pattern.factory;
+package design.pattern.ch1.factory;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class CustomerTest {
 
