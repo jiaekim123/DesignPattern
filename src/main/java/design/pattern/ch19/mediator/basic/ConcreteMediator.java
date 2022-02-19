@@ -22,7 +22,7 @@ public class ConcreteMediator implements Mediator {
     @Override
     public void mediate(Colleague colleague) {
         for (Colleague receiverColleague : colleagueList) {
-            System.out.println("\t[Mediating " + colleague.getName() + " to " + receiverColleague.getName() + "]");
+            System.out.printf("\t[Mediating " + colleague.getName() + " to " + receiverColleague.getName() + "] ");
             receiverColleague.receive(colleague);
         }
     }

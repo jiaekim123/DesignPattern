@@ -10,8 +10,8 @@ class MembersTest {
     void observerTest() {
         Subject subject = new Members();
         Observer observer1 = new UserA("jiae");
-        subject.addObserver(observer1);
         Observer observer2 = new UserA("nova");
+        subject.addObserver(observer1);
         subject.addObserver(observer2);
 
         subject.notifyObserver();

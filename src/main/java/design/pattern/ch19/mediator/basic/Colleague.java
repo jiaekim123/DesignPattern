@@ -2,12 +2,13 @@ package design.pattern.ch19.mediator.basic;
 
 public abstract class Colleague {
     private Mediator mediator;
-    protected String name;
     private String message;
+    private final String name;
+    private final ColleagueType type;
 
-
-    public Colleague(String name) {
+    protected Colleague(String name, ColleagueType type) {
         this.name = name;
+        this.type = type;
     }
 
     public void setMediator(Mediator mediator) {
@@ -28,6 +29,10 @@ public abstract class Colleague {
 
     public String getName() {
         return name;
+    }
+
+    public ColleagueType getType() {
+        return type;
     }
 
     public void send() {

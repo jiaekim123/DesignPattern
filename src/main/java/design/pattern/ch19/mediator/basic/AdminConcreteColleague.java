@@ -1,8 +1,8 @@
 package design.pattern.ch19.mediator.basic;
 
-public class ConcreteColleague3 extends Colleague {
-    public ConcreteColleague3(String name) {
-        super(name);
+public class AdminConcreteColleague extends Colleague {
+    public AdminConcreteColleague(String name) {
+        super(name, ColleagueType.ADMIN);
     }
 
     @Override
