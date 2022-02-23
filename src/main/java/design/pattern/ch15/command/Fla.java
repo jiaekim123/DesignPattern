@@ -1,7 +1,7 @@
 package design.pattern.ch15.command;
 
 /**
- * Receiver 역할을 하는 플라
+ * ConcreteCommand 역할을 하는 플라
  */
 public class Fla implements Music {
     @Override

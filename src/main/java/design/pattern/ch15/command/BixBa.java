@@ -1,7 +1,7 @@
 package design.pattern.ch15.command;
 
 /**
- * ConcreteCommand 역할을 수행하는 BixBa 클래스
+ * Invoker 역할을 수행하는 BixBa 클래스
  */
 public class BixBa {
     private Music music;

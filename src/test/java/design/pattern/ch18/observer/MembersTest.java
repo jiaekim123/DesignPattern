@@ -13,7 +13,7 @@ class MembersTest {
         Observer observer2 = new UserA("nova");
         subject.addObserver(observer1);
         subject.addObserver(observer2);
-
+        
         subject.notifyObserver();
     }
 }

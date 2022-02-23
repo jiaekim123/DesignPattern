@@ -1,7 +1,7 @@
 package design.pattern.ch15.command;
 
 /**
- * Receiver 역할을 하는 우투브
+ * ConcreteCommand 역할을 하는 우투브
  */
 public class Utube implements Music {
     @Override

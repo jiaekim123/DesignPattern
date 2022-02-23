@@ -1,5 +1,6 @@
 package design.pattern.ch20.state.basic;
 
+
 public class On implements PowerState {
     @Override
     public PowerState button() {
