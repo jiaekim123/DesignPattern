@@ -34,6 +34,6 @@ public abstract class HamburgerTemplate {
 
     protected abstract String source();
 
-    abstract protected List<String> vegetableList();
+    protected abstract List<String> vegetableList();
 
 }

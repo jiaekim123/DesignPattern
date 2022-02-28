@@ -9,5 +9,5 @@ public abstract class Strategy {
         this.delegate = delegate;
     }
 
-    abstract public void attack();
+    public abstract void attack();
 }
