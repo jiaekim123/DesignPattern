@@ -2,33 +2,39 @@ package design.pattern.ch5.builder;
 
 public class HomeOfficeBuilder extends Builder{
     @Override
-    public void buildWorkspace() {
+    public Builder buildWorkspace() {
         office.setWorkspace("스윗 마이 홈");
+        return this;
     }
 
     @Override
-    public void buildPc() {
+    public Builder buildPc() {
         office.setPc("맥북");
+        return this;
     }
 
     @Override
-    public void buildKeyboard() {
+    public Builder buildKeyboard() {
         office.setKeyboard("키크론 K8");
+        return this;
     }
 
     @Override
-    public void buildMouse() {
+    public Builder buildMouse() {
         office.setMouse("로지텍 MX Master");
+        return this;
     }
 
     @Override
-    public void buildWorker() {
+    public Builder buildWorker() {
         office.setWorker("노예");
+        return this;
     }
 
     @Override
-    public void buildMonitor() {
+    public Builder buildMonitor() {
         office.setMonitor("빈티나는 모니터 두개");
+        return this;
     }
 
     @Override
