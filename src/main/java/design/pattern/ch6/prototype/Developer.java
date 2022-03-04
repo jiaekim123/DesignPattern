@@ -5,10 +5,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Developer implements Cloneable {
-    private String name;
+    private final String name;
     private Integer workingYear; // 연차...
-    private Map<String, Integer> languageMap;
-    private Map<String, Integer> skillMap;
+    private final Map<String, Integer> languageMap;
+    private final Map<String, Integer> skillMap;
 
     public Developer(String name) {
         this.name = name;
@@ -17,7 +17,7 @@ public class Developer implements Cloneable {
         this.skillMap = new HashMap<>();
     }
 
-    public Developer(String name, Integer workingYear, Map<String, Integer> languageMap, Map<String, Integer> skillMap) {
+    private Developer(String name, Integer workingYear, Map<String, Integer> languageMap, Map<String, Integer> skillMap) {
         this.name = name;
         this.workingYear = workingYear;
         this.languageMap = languageMap;
@@ -53,19 +53,18 @@ public class Developer implements Cloneable {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        String name = this.name + "_clone";
-        Integer workingYear = this.workingYear;
-        Map<String, Integer> skillMap = new HashMap<>();
-        for (String key : this.skillMap.keySet()) {
-            skillMap.put(key, this.skillMap.get(key));
+    protected Developer clone() throws CloneNotSupportedException {
+        Integer cloneWorkingYear = this.workingYear;
+        Map<String, Integer> cloneSkillMap = new HashMap<>();
+        for (Map.Entry<String, Integer> entry : this.skillMap.entrySet()) {
+            cloneSkillMap.put(entry.getKey(), entry.getValue());
         }
-        Map<String, Integer> languageMap = new HashMap<>();
-        for (String key : this.languageMap.keySet()) {
-            languageMap.put(key, this.languageMap.get(key));
+        Map<String, Integer> cloneLanguageMap = new HashMap<>();
+        for (Map.Entry<String, Integer> entry : this.languageMap.entrySet()) {
+            cloneLanguageMap.put(entry.getKey(), entry.getValue());
         }
 
-        return new Developer(name, workingYear, languageMap, skillMap);
+        return new Developer(this.name, cloneWorkingYear, cloneLanguageMap, cloneSkillMap);
     }
 
     @Override
