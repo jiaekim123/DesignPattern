@@ -1,8 +1,8 @@
 package design.pattern.ch10.decorator.cake;
 
-public class Mint extends CakeDecorator {
-    public Mint(Cake cake) {
-        super(cake);
+public class Mint extends CakeComponentDecorator {
+    public Mint(CakeComponent cakeComponent) {
+        super(cakeComponent);
     }
 
     @Override
