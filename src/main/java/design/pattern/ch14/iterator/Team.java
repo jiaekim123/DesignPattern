@@ -2,7 +2,7 @@ package design.pattern.ch14.iterator;
 
 import java.util.Iterator;
 
-public class Team implements Aggregate {
+public class Team implements Aggregate<Worker> {
     private final Worker[] workers;
     private final String name;
     private int lastIndex = 0;
